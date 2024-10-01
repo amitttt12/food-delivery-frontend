@@ -1,9 +1,15 @@
-import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
-createRoot(document.getElementById("root")).render(
+import ReactDOM from "react-dom/client";
+import StoreContextProvider from "./components/context/StoreContext.jsx";
+import "./index.css";
+import React from "react";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
-    <App />
+    <StoreContextProvider>
+      <App />
+    </StoreContextProvider>
   </BrowserRouter>
 );
