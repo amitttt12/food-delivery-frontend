@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 
 import { food_list } from "../../assets/assets";
-import { useSubmit } from "react-router-dom";
+// import { useSubmit } from "react-router-dom";
 
 export const StoreContext = createContext(null);
 
@@ -31,7 +31,7 @@ const StoreContextProvider = (props) => {
     console.log(cartItems);
   }, [cartItems]);
 
-  
+
   return (
     <StoreContext.Provider value={contextValue}>
       {props.children}
